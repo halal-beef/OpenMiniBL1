@@ -20,6 +20,8 @@ bl1.elf: $(OBJS)
 
 bl1.bin: bl1.elf
 	$(OBJCOPY) -O binary $< $@
+	truncate -s 9920 $@
+	cat bl1-footer >> $@
 
 clean:
 	rm -f *.o *.elf *.bin
