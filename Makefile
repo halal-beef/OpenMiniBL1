@@ -5,7 +5,7 @@ OBJCOPY = $(CROSS)objcopy
 
 CFLAGS  = -ffreestanding -nostdlib -nostartfiles -Os -g -Iinclude
 
-OBJS = start.o main.o bl1_info.o bootrom_funcs.o epbl_checks.o epbl_info.o memory.o pmu.o string.o
+OBJS = start.o main.o bl1_info.o bootrom_funcs.o epbl_checks.o epbl_info.o pmu.o string.o
 
 all: bl1.elf bl1.bin
 
