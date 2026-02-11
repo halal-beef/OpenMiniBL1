@@ -18,7 +18,7 @@ uint32_t get_bl1_boot_flag(void)
 
 void set_status_bit(uint32_t unk1, uint32_t unk2)
 {
-    ((void(*)(uint32_t, uint32_t))readl(PTR_GRAB_BL1_BOOT_FLAG))(unk1, unk2);
+    ((void(*)(uint32_t, uint32_t))readl(PTR_SET_STATUS_BIT))(unk1, unk2);
 }
 
 void raw_usb_send(uint32_t address, uint32_t len)
